@@ -1,0 +1,150 @@
+:root {
+
+  /* Primary */
+  
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+/* Neutral */
+
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  height: 100%;
+  max-width: 100%;
+  display: block; /* so the img takes the whole width and height of its container , if not , there will be some empty space under the img and its container */
+}
+body {
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: "Montserrat", "Fraunces" , sans-serif;
+  display: grid;
+  place-content: center;
+  background-color: var(--Cream);
+  padding: 0.5rem;
+}
+
+.card {
+  
+  border-radius: 1em;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden; 
+  background-color: var(--White);
+}
+
+@media (min-width: 626px) {
+
+
+  .image-container img {
+    content: url("images/image-product-desktop.jpg");
+  }
+}
+
+
+
+.text-side {
+  padding: 2rem;
+}
+
+
+
+.category-name {
+  font-family: "Montserrat" ;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 0.4rem;
+  text-transform: uppercase; 
+  margin-bottom: 1.5rem;
+} 
+
+.product-name {
+  font-size: 2.75rem;
+  font-family: "Fraunces";
+  font-weight: 700;
+  color: var(--Very-dark-blue);
+  margin-bottom: 1.5rem;
+}
+
+.product-description {
+  color: var(--Dark-grayish-blue);
+  font-size: 1.2rem;
+  line-height: 26px;
+  margin-bottom: 1.5rem;
+}
+
+
+.flex-grp {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.discount-price {
+  color: var(--Dark-cyan);
+  font-family: "Fraunces";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.original-price {
+  font-family: "Fraunces";
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+button > img {
+width: 20px;
+height: 20px;
+
+}
+.add-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.add-button:hover {
+  background-color: hsl(158, 26%, 25%); /* a slightly darker background-color */
+}
+
+@media (max-width: 625px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .product-name {
+    font-size: 2.25rem;
+  }
+  .product-description {
+    font-size: 1rem;
+  }
+
+  .discount-price {
+    font-size: 1.75rem;
+  }
+ 
+
+}
